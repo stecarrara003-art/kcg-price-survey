@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Indagine Prezzi – King C. Gillette</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+    }
+    h1 {
+      text-align: center;
+    }
+    h2 {
+      margin-top: 40px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+    .question {
+      margin: 20px 0;
+    }
+    label {
+      font-weight: bold;
+    }
+    input[type=range] {
+      width: 100%;
+    }
+    .value {
+      font-weight: bold;
+      color: #003a8f;
+    }
+    button {
+      background: #003a8f;
+      color: white;
+      border: none;
+      padding: 15px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 6px;
+      width: 100%;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+<div class="container">
+  <h1>Percezione del Prezzo – King C. Gillette</h1>
+  <p>Per ciascun prodotto, indica il prezzo che ritieni più appropriato.</p>
+
+  <form id="priceForm">
+
+    <!-- ================== REGOLABARBA PRO ================== -->
+    <h2>Regolabarba Pro</h2>
+
+    <div class="question">
+      <label>Prezzo troppo basso (scarsa qualità)</label><br>
+      € <span class="value" id="rp_q1_val">55</span>
+      <input type="range" min="45" max="65" step="1" value="55" name="rp_q1" oninput="rp_q1_val.innerText=this.value">
+    </div>
+
+    <div class="question">
+      <label>Prezzo conveniente</label><br>
+      € <span class="value" id="rp_q2_val">55</span>
+      <input type="range" min="45" max="65" step="1" value="55" name="rp_q2" oninput="rp_q2_val.innerText=this.value">
+    </div>
+
+    <div class="question">
+      <label>Prezzo giusto</label><br>
+      € <span class="value" id="rp_q3_val">55</span>
+      <input type="range" min="45" max="65" step="1" value="55" name="rp_q3" oninput="rp_q3_val.innerText=this.value">
+    </div>
+
+    <div class="question">
+      <label>Prezzo troppo alto</label><br>
+      € <span class="value" id="rp_q4_val">55</span>
+      <input type="range" min="45" max="65" step="1" value="55" name="rp_q4" oninput="rp_q4_val.innerText=this.value">
+    </div>
+
+    <!-- ================== STYLE MASTER ================== -->
+    <h2>Rifinitore Barba Style Master</h2>
+
+    <div class="question">
+      <label>Prezzo troppo basso</label><br>
+      € <span class="value" id="sm_q1_val">45</span>
+      <input type="range" min="35" max="55" step="1" value="45" name="sm_q1" oninput="sm_q1_val.innerText=this.value">
+    </div>
+
+    <div class="question">
+      <label>Prezzo conveniente</label><br>
+      € <span class="value" id="sm_q2_val">45</span>
+      <input type="range" min="35" max="55" step="1" value="45" name="sm_q2" oninput="sm_q2_val.innerText=this.value">
+    </div>
+
+    <div class="question">
+      <label>Prezzo giusto</label><br>
+      € <span class="value" id="sm_q3_val">45</span>
+      <input type="range" min="35" max="55" step="1" value="45" name="sm_q3" oninput="sm_q3_val.innerText=this.value">
+    </div>
+
+    <div class="question">
+      <label>Prezzo troppo alto</label><br>
+      € <span class="value" id="sm_q4_val">45</span>
+      <input type="range" min="35" max="55" step="1" value="45" name="sm_q4" oninput="sm_q4_val.innerText=this.value">
+    </div>
+
+    <!-- ================== DETERGENTE ================== -->
+    <h2>Detergente Barba e Viso</h2>
+
+    <div class="question">
+      <label>Prezzo troppo basso</label><br>
+      € <span class="value" id="dw_q1_val">8</span>
+      <input type="range" min="1" max="15" step="0.5" value="8" name="dw_q1" oninput="dw_q1_val.innerText=this.value">
+    </div>
+
+    <div class="question">
+      <label>Prezzo conveniente</label><br>
+      € <span class="value" id="dw_q2_val">8</span>
+      <input type="range" min="1" max="15" step="0.5" value="8" name="dw_q2" oninput="dw_q2_val.innerText=this.value">
+    </div>
+
+    <div class="question">
+      <label>Prezzo giusto</label><br>
+      € <span class="value" id="dw_q3_val">8</span>
+      <input type="range" min="1" max="15" step="0.5" value="8" name="dw_q3" oninput="dw_q3_val.innerText=this.value">
+    </div>
+
+    <div class="question">
+      <label>Prezzo troppo alto</label><br>
+      € <span class="value" id="dw_q4_val">8</span>
+      <input type="range" min="1" max="15" step="0.5" value="8" name="dw_q4" oninput="dw_q4_val.innerText=this.value">
+    </div>
+
+    <!-- ================== CREMA IDRATANTE ================== -->
+    <h2>Crema Idratante Barba e Viso</h2>
+
+    <div class="question">
+      <label>Prezzo troppo basso</label><br>
+      € <span class="value" id="mo_q1_val">12</span>
+      <input type="range" min="4" max="20" step="0.5" value="12" name="mo_q1" oninput="mo_q1_val.innerText=this.value">
+    </div>
+
+    <div class="question">
+      <label>Prezzo conveniente</label><br>
+      € <span class="value" id="mo_q2_val">12</span>
+      <input type="range" min="4" max="20" step="0.5" value="12" name="mo_q2" oninput="mo_q2_val.innerText=this.value">
+    </div>
+
+    <div class="question">
+      <label>Prezzo giusto</label><br>
+      € <span class="value" id="mo_q3_val">12</span>
+      <input type="range" min="4" max="20" step="0.5" value="12" name="mo_q3" oninput="mo_q3_val.innerText=this.value">
+    </div>
+
+    <div class="question">
+      <label>Prezzo troppo alto</label><br>
+      € <span class="value" id="mo_q4_val">12</span>
+      <input type="range" min="4" max="20" step="0.5" value="12" name="mo_q4" oninput="mo_q4_val.innerText=this.value">
+    </div>
+
+    <button type="submit">Invia risposte</button>
+
+  </form>
+</div>
+
+<script>
+  const form = document.getElementById("priceForm");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const data = new FormData(form);
+
+    fetch("https://script.google.com/macros/s/AKfycbwZCLMlLOo4RF_CE15oSxi4-kx9LzrHR6ZVGKs-St1Ba1kYhi-vgRvnbIKnKDoL89Ai/exec", {
+      method: "POST",
+      body: data
+    }).then(() => {
+      alert("Grazie! Risposte inviate correttamente.");
+      form.reset();
+    });
+  });
+</script>
+
+</body>
+</html>
